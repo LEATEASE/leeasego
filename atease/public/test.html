@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数值交换
+        let a={a:1,value:1}
+        let b={b:2,value:2}
+        [a.value, b.value] = [b.value, a.value]
+        console.log(a.value); // 输出: 2
+        console.log(b.value); // 输出: 1
+        //循环输出第一、二、四个data的值
+        var jsonObj={
+            'listData':[{
+                'data':'11'
+            },{
+                'data':'22'
+            },{
+                'data':'33'
+            },{
+                'data':'44'
+            }]
+        }
+        jsonObj.listData.map(item=>{
+            if (item.data!='33') {
+                console.log(item.data);
+            }
+        })
+        //编辑一段代码实现数组去重(es6)
+        let arr=[1,2,2,3,3,3,4,4,4,4]
+        let newArr=[...new Set(arr)]
+        console.log(...newArr);
+    </script>
+</body>
+</html>
